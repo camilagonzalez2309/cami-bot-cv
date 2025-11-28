@@ -1,38 +1,276 @@
-.App {
-  text-align: center;
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+    sans-serif;
+  background: #050505;
+  color: #111827;
 }
 
-.App-logo {
-  height: 40vmin;
+.outer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.frame {
+  width: 100%;
+  max-width: 1200px;
+  background: #f5f5f5;
+  border-radius: 32px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.55);
+  padding: 24px 32px 32px;
+  box-sizing: border-box;
+  min-height: 550px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  height: 50px;
+}
+
+.brand-name {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.header-nav {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-link {
+  font-size: 14px;
+  text-decoration: none;
+  color: #6b7280;
+  padding-bottom: 4px;
+  border-bottom: 1px solid transparent;
+}
+
+.nav-link-active {
+  color: #111827;
+  border-bottom-color: #111827;
+}
+
+.contact-btn {
+  font-size: 14px;
+  text-decoration: none;
+  border-radius: 999px;
+  color: #ffffff;
+  height: 150px;
+  width: 150px;
+}
+
+/* MAIN */
+.main {
+  padding: 8px 0 0;
+  flex: 1;
+  display: flex;
+}
+
+/* HERO estilo grid */
+.hero {
+  padding: 0px 24px 32px;
+  border-radius: 24px;
+  background: #f5f5f5;
+  position: relative;
+  overflow: hidden;
+}
+
+/* grid de fondo */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 20px;
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.04) 1px,
+      transparent 1px
+    ),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+  background-size: 32px 32px;
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.hero-grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(0, 1fr);
+  gap: 40px;
+  z-index: 1;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 11px;
+  color: #6b7280;
+  margin-bottom: 10px;
+}
+
+.hero-title {
+  font-family: "Georgia", "Times New Roman", serif;
+  font-size: 62px;
+  line-height: 1.05;
+  margin: 0 0 16px;
+  z-index: 9999999;
+  width: 70%;
+}
+
+.hero-subtitle {
+  font-size: 15px;
+  color: #6b7280;
+  max-width: 480px;
+  text-align: justify;
+}
+
+.hero-buttons {
+  margin-top: 24px;
   display: flex;
-  flex-direction: column;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 10px 20px;
+  border-radius: 999px;
+  font-size: 14px;
+  text-decoration: none;
+  border: 1px solid #111827;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: #111827;
+  color: #ffffff;
+  width: fit-content;
+}
+
+.btn-outline {
+  background: transparent;
+  color: #111827;
+}
+
+.hero-avatar {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.avatar-circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 999px;
+  background: #111827;
+  color: #f3f4f6;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-weight: 600;
+  font-size: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+/* SECCIÓN BOT */
+.bot-section {
+  margin-top: 36px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.bot-header {
+  margin-bottom: 16px;
 }
+
+.section-title {
+  margin: 0 0 4px;
+  font-size: 18px;
+}
+
+.section-subtitle {
+  margin: 0;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.bot-card {
+  border-radius: 20px;
+  overflow: hidden;
+  background: #ffffff;
+  padding: 12px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* WORKY PAGE */
+.worky-page {
+  padding: 70px 30px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.worky-header {
+  margin-bottom: 24px;
+}
+
+/* ESTILO GENERAL DEL WIDGET (para ambos bots) */
+df-messenger {
+  /* Apariencia general */
+  --df-messenger-font-family: system-ui, -apple-system, sans-serif;
+  --df-messenger-font-color: #ffffff; /* títulos, fechas, etc. */
+  --df-messenger-font-size: 14px;
+
+  /* Fondo del chat */
+  --df-messenger-chat-background-color: #ffffff;
+  --df-messenger-message-list-background-color: #3069b5;
+  --df-messenger-descriptionWrapper-color: red;
+
+  /* Header */
+  --df-messenger-button-titlebar-color: #3069b5;
+  --df-messenger-button-titlebar-font-color: #111827;
+  --df-messenger-minimized-chat-close-icon-color: #111827;
+
+  /* Mensajes (burbujas) */
+  --df-messenger-bot-message: #ffffff !important;
+  --df-messenger-user-message: #3069b5 !important;
+
+  /* Chips / botones rápidos */
+  --df-messenger-chip-color: #3069b5;
+  --df-messenger-chip-border-color: #ffffff;
+
+  /* Input / footer */
+  --df-messenger-input-box-color: #ffffff;
+  --df-messenger-input-font-color: #111827;
+  --df-messenger-input-placeholder-font-color: #9ca3af;
+  --df-messenger-send-icon: #3069b5;
+
+  position: fixed;
+  bottom: 124px;  /* alejás/acercás al “footer” de la pantalla */
+  right: 24px;   /* ajustás distancia al borde derecho */
+  z-index: 9999;  
+}
+
+.worky {
+  width: 240px;
+  position: absolute;
+  right: 150px;
+  top: 90px;
+}
+
+/* contenedor del bot en Worky: se va hacia abajo */
+.bot-container {
+  margin-top: auto;
+  padding-bottom: 8px; /* ajustá si querés más/menos espacio con el borde inferior */
+}
+
+/* sacar el position: fixed del widget dentro de Worky */
+.bot-container df-messenger {
+  position: absolute !important;
+  bottom: auto !important;
+  right: auto !important;
+} 
