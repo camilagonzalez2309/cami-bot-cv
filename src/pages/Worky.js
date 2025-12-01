@@ -29,6 +29,11 @@ function Worky() {
       >
         Abrir diseño en Figma
       </a>
+      {/* Flecha y texto para el bot */}
+      <div className="bot-arrow-hint">
+        <span className="bot-arrow-text">¡Hace click en Worky!</span>
+        <img src="https://images.vexels.com/media/users/3/150936/isolated/preview/73014b10f3ddce8f87903227d112deeb-doodle-de-trazo-de-flecha-curva.png" alt="Flecha hacia el bot" className="bot-arrow-img" />
+      </div>
     </div>
   );
 }
