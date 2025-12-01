@@ -6,8 +6,9 @@ function Home() {
           <div className="hero-text">
             <p className="eyebrow">Frontend · UX · Bots</p>
             <h1 className="hero-title">
-              Más allá del CV. Diseñando experiencias conversacionales.
+              Quiero ser analista conversacional. 😎
             </h1>
+            <h1> Por eso ahora mi cv es un bot</h1>
             <p className="hero-subtitle">
               Conecto desarrollo frontend, producto y UX para crear flujos y
               bots que respondan a necesidades reales de las personas que los
@@ -39,12 +40,12 @@ function Home() {
             </a>
           </div>
         </div>
-      <df-messenger
-        intent="WELCOME"
-        chat-title="CamiCv"
-        agent-id="09fb283a-fd2e-439e-a937-66628af2e863"
-        language-code="es"
-      ></df-messenger>
+        <df-messenger
+          intent="WELCOME"
+          chat-title="CamiCv"
+          agent-id="09fb283a-fd2e-439e-a937-66628af2e863"
+          language-code="es"
+        ></df-messenger>
       </section>
     </>
   );
