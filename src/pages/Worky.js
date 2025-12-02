@@ -1,10 +1,21 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 function Worky() {
+  const [showBotHint, setShowBotHint] = useState(true);
+  const botRef = useRef(null);
+  useEffect(() => {
+    const bot = document.querySelector("df-messenger");
+    if (!bot) return;
+    const handleClick = () => setShowBotHint(false);
+    bot.addEventListener("click", handleClick);
+    return () => bot.removeEventListener("click", handleClick);
+  }, []);
+
   return (
     <div className="worky-page">
       <div className="bot-container">
         <df-messenger
+          ref={botRef}
           intent="WELCOME"
           chat-title="Chat con Worky"
           agent-id="78949543-dbf5-4021-b127-5c5ef7750f65"
@@ -30,10 +41,13 @@ function Worky() {
         Abrir diseño en Figma
       </a>
       {/* Flecha y texto para el bot */}
-      <div className="bot-arrow-hint">
-        <span className="bot-arrow-text">¡Hace click en Worky!</span>
-        <img src="https://images.vexels.com/media/users/3/150936/isolated/preview/73014b10f3ddce8f87903227d112deeb-doodle-de-trazo-de-flecha-curva.png" alt="Flecha hacia el bot" className="bot-arrow-img" />
-      </div>
+            {showBotHint && (
+          <div className="bot-arrow-hint">
+            <span className="bot-arrow-text">¡Hace click en Worky!</span>
+            <img src="https://images.vexels.com/media/users/3/150936/isolated/preview/73014b10f3ddce8f87903227d112deeb-doodle-de-trazo-de-flecha-curva.png" alt="Flecha hacia el bot" className="bot-arrow-img" />
+          </div>
+        )}
+
     </div>
   );
 }
