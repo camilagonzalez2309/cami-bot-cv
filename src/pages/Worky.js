@@ -25,6 +25,7 @@ function Worky() {
       <section className="worky-header">
         <p className="eyebrow">Proyecto personal · MVP</p>
         <h1 className="hero-title">Worky, un bot para las dudas de HR.</h1>
+        <h1 className="hero-title1">Pensando soluciones reales a problemas reales.</h1>
         <p className="hero-subtitle">
           Un asistente pensado para responder consultas frecuentes sobre
           vacaciones, licencias y gestiones diarias sin perder tiempo navegando

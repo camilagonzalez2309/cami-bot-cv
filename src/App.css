@@ -2,7 +2,7 @@ body {
   margin: 0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
     sans-serif;
-  background: #050505;
+  background: #f5f5f5;
   color: #111827;
 }
 
@@ -21,8 +21,7 @@ body {
   box-shadow: 0 24px 60px rgba(0, 0, 0, 0.55);
   padding: 24px 32px 32px;
   box-sizing: border-box;
-  min-height: 550px;
-
+  min-height: 500px;
   display: flex;
   flex-direction: column;
 }
@@ -214,7 +213,7 @@ body {
 
 /* WORKY PAGE */
 .worky-page {
-  padding: 70px 30px;
+  padding: 0px 24px 32px;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -224,7 +223,9 @@ body {
   position: relative;
   overflow: hidden;
 }
-
+.worky-header {
+  width: 70%;
+}
 .worky-page::before {
   content: "";
   position: absolute;
@@ -287,7 +288,6 @@ df-messenger {
 
 /* contenedor del bot en Worky: se va hacia abajo */
 .bot-container {
-  margin-top: auto;
   padding-bottom: 8px; /* ajustá si querés más/menos espacio con el borde inferior */
 }
 
@@ -317,7 +317,7 @@ df-messenger {
   border-radius: 999px;
   margin-bottom: 2px;
   font-weight: 500;
-  box-shadow: 0 2px 8px rgba(199,44,65,0.10);
+  box-shadow: 0 2px 8px rgba(199, 44, 65, 0.1);
   border: 2px solid #c72c41;
   pointer-events: auto;
   text-shadow: none;
@@ -332,19 +332,27 @@ df-messenger {
   width: 90px;
   height: auto;
   margin-top: 2px;
-  filter: drop-shadow(0 2px 8px rgba(199,44,65,0.10));
+  filter: drop-shadow(0 2px 8px rgba(199, 44, 65, 0.1));
   transform: rotate(135deg);
   animation: bot-arrow-bounce 1.2s infinite alternate;
 }
 
 @keyframes arrow-bounce {
-  0% { transform: rotate(15deg) translateY(0); }
-  100% { transform: rotate(15deg) translateY(18px); }
+  0% {
+    transform: rotate(15deg) translateY(0);
+  }
+  100% {
+    transform: rotate(15deg) translateY(18px);
+  }
 }
 
 @keyframes bot-arrow-bounce {
-  0% { transform: rotate(135deg) translateY(0); }
-  100% { transform: rotate(135deg) translateY(18px); }
+  0% {
+    transform: rotate(135deg) translateY(0);
+  }
+  100% {
+    transform: rotate(135deg) translateY(18px);
+  }
 }
 
 /* === MOBILE FIRST: Dispositivos pequeños (max-width: 576px) === */
@@ -360,31 +368,63 @@ df-messenger {
     gap: 8px;
     align-items: flex-start;
   }
+  .frame {
+    box-shadow: none;
+    padding: 24px 0 32px;
+  }
   .hero {
     padding: 0 4px 10px;
     border-radius: 10px;
   }
   .hero-title {
-    font-size: 18px;
+    font-size: 47px;
     width: 100%;
     margin-bottom: 8px;
   }
   .hero-subtitle {
-    font-size: 12px;
+    font-size: 20px;
     max-width: 100%;
   }
+
+  .hero-subtitle1 {
+    width: 100%;
+  }
+
   .hero-buttons {
     flex-direction: column;
     gap: 6px;
-    margin-top: 10px;
+    margin-top: 31px;
   }
   .contact-btn {
     width: 60px;
     height: 60px;
     font-size: 12px;
   }
+
+  .btn {
+    width: fit-content;
+    font-size: 24px;
+  }
   .hero-avatar {
     margin-top: 10px;
+    display: none;
+  }
+  .hero-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .nav-link {
+    color: #d2669f;
+  }
+
+  .hero-text {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .section-title {
+    font-size: 22px;
   }
   .bot-arrow-hint {
     right: 10px;
@@ -394,12 +434,13 @@ df-messenger {
     font-size: 0.9rem;
     padding: 3px 8px;
   }
-  .bot-arrow-svg, .bot-arrow-img {
+  .bot-arrow-svg,
+  .bot-arrow-img {
     width: 36px;
     height: 36px;
   }
   .worky-page {
-    padding: 30px 4px;
+    padding: 0 4px 10px;
     border-radius: 10px;
   }
   df-messenger {
@@ -408,6 +449,10 @@ df-messenger {
     max-width: 100vw;
     min-width: 100px;
   }
+
+  .worky-header {
+  width: 90%;
+}
 }
 
 /* === TABLET: Dispositivos medianos (577px - 992px) === */
@@ -452,13 +497,14 @@ df-messenger {
     font-size: 1rem;
     padding: 4px 10px;
   }
-  .bot-arrow-svg, .bot-arrow-img {
+  .bot-arrow-svg,
+  .bot-arrow-img {
     width: 48px;
     height: 48px;
   }
   .worky-page {
-    padding: 40px 10px;
-    border-radius: 16px;
+    padding: 0 8px 16px;
+    border-radius: 12px;
   }
   df-messenger {
     bottom: 2vw;
@@ -482,7 +528,7 @@ df-messenger {
     border-radius: 24px;
   }
   .worky-page {
-    padding: 70px 30px;
+    padding: 0px 24px 32px;
     border-radius: 24px;
   }
   .contact-btn {

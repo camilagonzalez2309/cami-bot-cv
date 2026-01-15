@@ -19,9 +19,9 @@ function Home() {
           <div className="hero-text">
             <p className="eyebrow">Frontend · UX · Bots</p>
             <h1 className="hero-title">
-              Quiero ser analista conversacional. 😎
+             Soy diseñadora conversacional.
             </h1>
-            <h1> Por eso ahora mi cv es un bot</h1>
+            <h1 className="hero-subtitle1"> Por eso mi cv es un bot</h1>
             <p className="hero-subtitle">
               Conecto desarrollo frontend, producto y UX para crear flujos y
               bots que respondan a necesidades reales de las personas que los
