@@ -436,6 +436,7 @@ df-messenger {
   .bot-arrow-text {
     font-size: 0.9rem;
     padding: 3px 8px;
+    margin-bottom: -30px;
   }
   .bot-arrow-svg,
   .bot-arrow-img {
