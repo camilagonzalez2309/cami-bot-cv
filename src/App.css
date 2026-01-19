@@ -377,17 +377,20 @@ df-messenger {
     border-radius: 10px;
   }
   .hero-title {
-    font-size: 47px;
-    width: 100%;
+    font-size: 41px;
+    width: 99%;
     margin-bottom: 8px;
   }
+
   .hero-subtitle {
     font-size: 20px;
     max-width: 100%;
+    margin: 2px;
   }
 
   .hero-subtitle1 {
     width: 100%;
+    margin: 2px;
   }
 
   .hero-buttons {
@@ -429,6 +432,9 @@ df-messenger {
   .bot-arrow-hint {
     right: 10px;
     bottom: 60px;
+    /* Ocultar la flecha animada en pantallas móviles */
+    display: none !important;
+    visibility: hidden;
   }
   .bot-arrow-text {
     font-size: 0.9rem;
@@ -451,8 +457,8 @@ df-messenger {
   }
 
   .worky-header {
-  width: 90%;
-}
+    width: 90%;
+  }
 }
 
 /* === TABLET: Dispositivos medianos (577px - 992px) === */
