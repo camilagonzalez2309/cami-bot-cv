@@ -60,11 +60,10 @@ function Home() {
           agent-id="09fb283a-fd2e-439e-a937-66628af2e863"
           language-code="es"
         ></df-messenger>
-        {/* Flecha y texto para el bot */}
+        {/* Texto de hint para el bot (sin flecha) */}
         {showBotHint && (
           <div className="bot-arrow-hint">
             <span className="bot-arrow-text">¡Hace click en el bot!</span>
-            <img src="https://images.vexels.com/media/users/3/150936/isolated/preview/73014b10f3ddce8f87903227d112deeb-doodle-de-trazo-de-flecha-curva.png" alt="Flecha hacia el bot" className="bot-arrow-img" />
           </div>
         )}
       </section>

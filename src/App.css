@@ -301,7 +301,8 @@ df-messenger {
 .bot-arrow-hint {
   position: fixed;
   right: 90px;
-  bottom: 110px;
+  /* bajar un poco el hint en desktop para separarlo visualmente */
+  bottom: 140px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -315,7 +316,7 @@ df-messenger {
   font-size: 1.3rem;
   padding: 7px 18px;
   border-radius: 999px;
-  margin-bottom: 2px;
+    margin-bottom: 49px;
   font-weight: 500;
   box-shadow: 0 2px 8px rgba(199, 44, 65, 0.1);
   border: 2px solid #c72c41;
@@ -431,10 +432,6 @@ df-messenger {
   }
   .bot-arrow-hint {
     right: 10px;
-    bottom: 60px;
-    /* Ocultar la flecha animada en pantallas móviles */
-    display: none !important;
-    visibility: hidden;
   }
   .bot-arrow-text {
     font-size: 0.9rem;
@@ -444,6 +441,8 @@ df-messenger {
   .bot-arrow-img {
     width: 36px;
     height: 36px;
+    display: none !important;
+    visibility: hidden;
   }
   .worky-page {
     padding: 0 4px 10px;
