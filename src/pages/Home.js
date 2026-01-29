@@ -18,9 +18,7 @@ function Home() {
         <div className="hero-grid">
           <div className="hero-text">
             <p className="eyebrow">Frontend · UX · Bots</p>
-            <h1 className="hero-title">
-             Soy diseñadora conversacional.
-            </h1>
+            <h1 className="hero-title">Soy diseñadora conversacional.</h1>
             <h1 className="hero-subtitle1"> Por eso mi cv es un bot</h1>
             <p className="hero-subtitle">
               Conecto desarrollo frontend, producto y UX para crear flujos y
@@ -30,6 +28,12 @@ function Home() {
             <div className="hero-buttons">
               <a href="/worky" className="btn btn-primary">
                 Ver Worky Bot 🤖
+              </a>
+              <a
+                href="https://www.figma.com/design/WMe7ZsES7F6LNznvvZMKtw/Challenge-CUX--BeBot?t=FbBVhGYxc4vj6R1p-0"
+                className="btn btn-primary boti"
+              >
+                Ver resideño BOTI 🤖
               </a>
               <a
                 href="https://www.linkedin.com/in/camilanataliagonzalez23/"

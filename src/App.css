@@ -328,7 +328,11 @@ df-messenger {
   transform: rotate(15deg);
   animation: arrow-bounce 1.2s infinite alternate;
 }
-
+.boti{ 
+  background-color: #FFCC01 !important;
+  border: none;
+  color: black;
+}
 .bot-arrow-img {
   width: 90px;
   height: auto;
