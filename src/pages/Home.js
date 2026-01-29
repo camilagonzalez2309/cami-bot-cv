@@ -50,7 +50,7 @@ function Home() {
             <a href="https://www.linkedin.com/in/camilanataliagonzalez23/">
               <img
                 className="contact-btn"
-                src="https://i.ibb.co/RkGttnCc/fotodeperfil.jpg"
+                src="https://media.licdn.com/dms/image/v2/D4D03AQEio7Bz2z3chw/profile-displayphoto-crop_800_800/B4DZwCliiDJsAI-/0/1769569922258?e=1771459200&v=beta&t=_JoQPgzeXIHcmiYslpmP6PYnDA6gsBbJyn1At7S0ir0"
                 alt="fotodeperfil"
                 border="0"
               />
